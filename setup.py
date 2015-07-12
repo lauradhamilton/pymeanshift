@@ -20,6 +20,7 @@
 from distutils.core import setup
 from distutils.core import Extension
 import re
+import numpy as np
 
 # Check for Numpy
 #try:
@@ -52,7 +53,8 @@ setup(name='pymeanshift',
       ext_modules=[Extension('_pymeanshift',
                              ['ms.cpp','msImageProcessor.cpp','rlist.cpp','RAList.cpp','pymeanshift.cpp'],
                              depends=['ms.h', 'msImageProcessor.h', 'RAList.h', 'rlist.h', 'tdef.h'],
-                             language='c++'
+                             language='c++',
+                             include_dirs=[np.get_include()]
                             )],
       py_modules=['pymeanshift'],
       
