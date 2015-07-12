@@ -22,10 +22,10 @@ from distutils.core import Extension
 import re
 
 # Check for Numpy
-try:
-    import numpy as np
-except ImportError as exc:
-    raise RuntimeError("Error: Failed to import Numpy ({}). Please check that Numpy is installed on your system.".format(exc))
+#try:
+#    import numpy as np
+#except ImportError as exc:
+#    raise RuntimeError("Error: Failed to import Numpy ({}). Please check that Numpy is installed on your system.".format(exc))
 
 # Parse package version
 version_file = 'pymeanshift.py'
