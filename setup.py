@@ -53,8 +53,8 @@ setup(name='pymeanshift',
       ext_modules=[Extension('_pymeanshift',
                              ['ms.cpp','msImageProcessor.cpp','rlist.cpp','RAList.cpp','pymeanshift.cpp'],
                              depends=['ms.h', 'msImageProcessor.h', 'RAList.h', 'rlist.h', 'tdef.h'],
-                             language='c++',
-                             include_dirs=[numpy.get_include()]
+                             language='c++'
+                             #include_dirs=[numpy.get_include()]
                             )],
       py_modules=['pymeanshift'],
       
